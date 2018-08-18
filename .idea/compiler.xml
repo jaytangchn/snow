@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="snow-mapper" />
+        <module name="snow-model" />
+        <module name="snow-pro" />
+        <module name="snow-service" />
+        <module name="snow-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="snow-mapper" target="1.7" />
+      <module name="snow-model" target="1.7" />
+      <module name="snow-pro" target="1.7" />
+      <module name="snow-service" target="1.7" />
+      <module name="snow-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

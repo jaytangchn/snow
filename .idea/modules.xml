@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/snow-mapper/snow-mapper.iml" filepath="$PROJECT_DIR$/snow-mapper/snow-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snow-model/snow-model.iml" filepath="$PROJECT_DIR$/snow-model/snow-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snow-pro.iml" filepath="$PROJECT_DIR$/snow-pro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snow-service/snow-service.iml" filepath="$PROJECT_DIR$/snow-service/snow-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snow-web/snow-web.iml" filepath="$PROJECT_DIR$/snow-web/snow-web.iml" />
+    </modules>
+  </component>
+</project>
