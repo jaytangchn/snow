@@ -1,7 +1,6 @@
 package com.jaytang;
 
 import com.jaytang.model.User;
-import com.mysql.jdbc.log.Log;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

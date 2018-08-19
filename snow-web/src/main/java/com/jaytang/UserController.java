@@ -18,6 +18,6 @@ public class UserController {
     @RequestMapping(value = "/user")
     public User getUser(@RequestParam("id")String id){
         //TestService testService = new TestService();
-        return testService.getUser(id);
+        return testService.getUser("12");
     }
 }
