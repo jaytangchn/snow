@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="snow-mapper" />
         <module name="snow-model" />
-        <module name="snow-pro" />
         <module name="snow-service" />
         <module name="snow-web" />
       </profile>
@@ -18,7 +17,7 @@
       <module name="snow-model" target="1.7" />
       <module name="snow-pro" target="1.7" />
       <module name="snow-service" target="1.7" />
-      <module name="snow-web" target="1.8" />
+      <module name="snow-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
