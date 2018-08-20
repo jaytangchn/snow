@@ -1,4 +1,4 @@
-package com.jaytang;
+package com.jaytang.app;
 
 import com.jaytang.model.User;
 

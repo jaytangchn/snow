@@ -1,7 +1,6 @@
 package com.jaytang.mapper;
 
 import com.jaytang.model.User;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**

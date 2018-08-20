@@ -1,6 +1,6 @@
-package com.jaytang.impl;
+package com.jaytang.app.impl;
 
-import com.jaytang.TestService;
+import com.jaytang.app.TestService;
 import com.jaytang.mapper.UserMapper;
 import com.jaytang.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
