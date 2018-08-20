@@ -14,12 +14,17 @@
  * 本地读取properties到bean
  * 启动类使用class扫描
  * 添加request 拦截器
+ * 整合日志框架
  
  #### 还可以做的
- * 整合日志框架
+
  * 整合redis 等缓存数据库
  * 优化durid 和 mybaties 配置
-
+ * 统一异常处理
+ * aop
+ * 热部署
+ * 单元测试
+ * mybatis逆向生成
  
  #### 注解
  * @SpringBootApplication是一个复合注解，包括@ComponentScan，和@SpringBootConfiguration，@EnableAutoConfiguration。
@@ -42,6 +47,7 @@
   * java启动参数里的*--*就是对应的properties参数.
   * jdk1.8 引入default 关键字可以让接口中的方法可以有默认的函数体，当一个类实现这个接口时，可以不用去实现这个方法，当然，这个类若实现这个方法，就等于子类覆盖了这个方法. 例如:接口WebMvcConfigurer中
   * 匿名类: 同样是WebMvcConfigurer 中 .直接new 一个抽象方法或接口实现方法. 在线程和WebConfiguration(本项目)中有用到.
+  * log4j 日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出。
  #### 参考博客
  https://blog.csdn.net/hry2015
 
