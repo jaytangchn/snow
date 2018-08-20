@@ -1,6 +1,6 @@
 package com.jaytang.app.controller;
 
-import com.jaytang.model.ApplicationConfig;
+import com.jaytang.model.config.ApplicationConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
