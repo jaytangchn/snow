@@ -22,7 +22,7 @@ public class WebConfiguration {
     @Bean
     public WebMvcConfigurer getWebMvcConfigurer(){
         /**
-         * 匿名内部类
+         * 匿名类
          */
         return new WebMvcConfigurer() {
             //添加注册拦截器

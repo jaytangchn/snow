@@ -12,7 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@ComponentScan
 @MapperScan(basePackages = "com.jaytang.mapper") // 扫描mapper包路径  加了@Mapper注解可以不要扫描
 public class SnowWebApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SnowWebApplication.class, args);
 	}

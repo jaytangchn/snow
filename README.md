@@ -16,9 +16,13 @@
  * 添加request 拦截器
  * 整合日志框架
  
+ #### 2018/08/22:
+ * 整合redis / jedis
+ * mysql驱动类更新为com.mysql.cj.jdbc.Driver
+ 
  #### 还可以做的
-
- * 整合redis 等缓存数据库
+ * websocket
+ * 使用redis做消息推送
  * 优化durid 和 mybaties 配置
  * 统一异常处理
  * aop
@@ -37,7 +41,7 @@
    @Service层是业务逻辑层注解，这个注解只是标注该类处于业务逻辑层。 
  * @Configuration 中所有带 @Bean 注解的方法都会被动态代理，因此调用该方法返回的都是同一个实例。
  * @Profile注解来进行配置多环境变量,dev,uat等.
- 
+ * @value注解有${}和#{}两种
  #### 其他知识
   * 关于两个配置文件的知识:
      * bootstrap.yml（bootstrap.properties）用来程序引导时执行，应用于更加早期配置信息读取，如可以使用来配置application.yml中使用到参数等

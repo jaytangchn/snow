@@ -1,17 +1,21 @@
 package com.jaytang.model;
 
 
+import com.alibaba.fastjson.annotation.JSONField;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+
+import java.io.Serializable;
 
 
 /**
  * Created by jaytangchn on 2018/8/18.
  */
 @Component
-public class User {
+public class User implements Serializable {
+
     private String id;
     private String name;
+    @JSONField(serialize = false)
     private String password;
     private String status;
     private String addr;
