@@ -20,6 +20,9 @@
  * 整合redis / jedis
  * mysql驱动类更新为com.mysql.cj.jdbc.Driver
  
+  #### 2018/08/23:
+ * redis 消息队列
+ 
  #### 还可以做的
  * websocket
  * 使用redis做消息推送

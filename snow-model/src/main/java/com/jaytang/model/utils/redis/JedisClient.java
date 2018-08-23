@@ -44,6 +44,12 @@ public interface JedisClient {
 
     long delByte(final String field);
 
+    /**
+     * 从 key 指定的哈希集中移除指定的域
+     * @param key
+     * @param field
+     * @return
+     */
     long hdel(final String key, final String field);
 
     Set<String> keys(final String pattern);
@@ -54,14 +60,41 @@ public interface JedisClient {
 
     Jedis getJedis();
 
+    /**
+     * 移除key对应的 list 的第一个元素。
+     * @param key
+     * @return
+     */
     String lpop(String key);
-
+    /**
+     * 从队列左边插入元素
+     * @param key
+     * @param strings
+     * @return
+     */
     Long lpush(String key, String... strings);
 
-    Long rpush(String key, String... strings);
-
     /**
-     * 订阅消息
+     * 从队列右边插入元素
+     * @param key
+     * @param strings
+     * @return
+     */
+    Long rpush(String key, String... strings);
+    /**
+     * 订阅订阅给定的模式
      */
     void psubscribe(JedisPubSub jedisPubSub, String patterns);
+
+    /**
+     * 发布消息
+     * @param channel
+     * @param message
+     * @return
+     */
+    Long publish(final String channel, final String message);
+
+    void subscribe(final JedisPubSub jedisPubSub, final String channels);
+
+
 }

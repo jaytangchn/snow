@@ -288,4 +288,25 @@ public class JedisClientSingle implements JedisClient {
         }
     }
 
+    @Override
+    public Long publish(String channel, String message) {
+        Jedis jedis = getCurrentJedisPool().getResource();
+        try {
+            Long result = jedis.publish(channel,message);
+            return result;
+        } finally {
+            jedis.close();
+        }
+    }
+
+    @Override
+    public void subscribe(JedisPubSub jedisPubSub, String channels) {
+        Jedis jedis = getCurrentJedisPool().getResource();
+        try {
+            jedis.subscribe(jedisPubSub,channels);
+        } finally {
+            jedis.close();
+        }
+    }
+
 }

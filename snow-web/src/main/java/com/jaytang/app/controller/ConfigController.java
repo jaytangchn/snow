@@ -1,6 +1,8 @@
 package com.jaytang.app.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.jaytang.app.MessageConsumerService;
+import com.jaytang.app.MessagePublishService;
 import com.jaytang.app.RedisCacheService;
 import com.jaytang.model.User;
 import com.jaytang.model.config.ApplicationConfig;
@@ -19,6 +21,25 @@ public class ConfigController {
     @Autowired
     private RedisCacheService cacheService;
 
+    @Autowired
+    private MessagePublishService messagePublishService;
+
+    @Autowired
+    private MessageConsumerService messageConsumerService;
+
+    /**
+     * redis 消息推送
+     */
+    @RequestMapping("/redisMsg")
+    public void testRedisMsg(){
+        messagePublishService.sendMessage(new String[]{"channel1"},"channel1") ;
+        //messageConsumerService.handleMessage(new String[]{"channel1"});
+    }
+
+    /**
+     * 读取本地资源配置
+     * @return
+     */
     @RequestMapping("/config")
     public Object getApplicationConfig(){
         return applicationConfig.toString();

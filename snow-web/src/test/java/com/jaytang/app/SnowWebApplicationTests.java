@@ -16,6 +16,20 @@ public class SnowWebApplicationTests {
 	}
 	@Autowired
 	private TestService testService;
+
+	@Autowired
+	private MessagePublishService messagePublishService;
+
+	@Autowired
+	private MessageConsumerService messageConsumerService;
+
+
+	@Test
+	public void testRedisMsg(){
+		messagePublishService.sendMessage(new String[]{"channel1"},"hello this is channel1") ;
+		messageConsumerService.handleMessage(new String[]{"channel1"});
+	}
+
 	@Test
 	public void getUser(){
 		//TestService testService = new TestService();
