@@ -1,12 +1,19 @@
 package com.jaytang.model.config;
 
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.jaytang.model.utils.LogUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * spring 4的新特性
@@ -36,6 +43,22 @@ public class WebConfiguration {
             public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
             }
+
+            /**
+             * 处理返回数据格式
+             * @param converters
+             */
+            @Override
+            public void configureMessageConverters(List<HttpMessageConverter<?>> converters){
+                FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
+                List<MediaType> supportedMediaTypes = new ArrayList<>();
+                supportedMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
+                fastConverter.setSupportedMediaTypes(supportedMediaTypes);
+                //设置WriteEnumUsingToString,对枚举的处理
+                fastConverter.setFeatures(SerializerFeature.PrettyFormat,SerializerFeature.WriteEnumUsingToString);
+                converters.add(fastConverter);
+            }
+
         };
     }
 }

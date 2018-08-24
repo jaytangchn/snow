@@ -22,7 +22,8 @@
  
   #### 2018/08/23:
  * redis 消息队列
- 
+  #### 2018/08/24:
+ * fastjson处理controller返回数据
  #### 还可以做的
  * websocket
  * 使用redis做消息推送
