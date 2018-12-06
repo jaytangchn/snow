@@ -5,4 +5,13 @@
   <select id="getUser" resultType="com.jaytang.model.User">
       SELECT  * from user where id=#{id}
   </select>
+
+    <select id="getPwd" resultType="String">
+        select password from user where  name=#{name}
+    </select>
+
+    <select id="getRoles" resultType="Role">
+        select role_name as roleName from  user u  , user_role ur, role r where u.id = ur.user_id and ur.role_id = r.role_id
+        and  u.name = #{user.name}
+    </select>
 </mapper>

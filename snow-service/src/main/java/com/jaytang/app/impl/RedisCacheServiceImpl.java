@@ -1,7 +1,7 @@
 package com.jaytang.app.impl;
 
 import com.jaytang.app.RedisCacheService;
-import com.jaytang.model.utils.redis.JedisClient;
+import com.jaytang.redis.JedisClient;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

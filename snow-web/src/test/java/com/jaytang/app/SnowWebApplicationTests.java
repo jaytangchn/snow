@@ -34,7 +34,7 @@ public class SnowWebApplicationTests {
 	public void getUser(){
 		//TestService testService = new TestService();
 
-		User user = testService.getUser("12");
-		System.out.print(user.getName());
+		User user = testService.getUser(1);
+		System.out.print(user.toString());
 	}
 }

@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Component
 public class User implements Serializable {
 
-    private String id;
+    private int id;
     private String name;
     @JSONField(serialize = false)
     private String password;
@@ -28,13 +28,6 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -56,7 +49,26 @@ public class User implements Serializable {
         return addr;
     }
 
-    public void setAddr(String addr) {
+   public void setAddr(String addr) {
         this.addr = addr;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", status='" + status + '\'' +
+                ", addr='" + addr + '\'' +
+                '}';
     }
 }

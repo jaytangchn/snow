@@ -1,15 +1,14 @@
 package com.jaytang.app;
 
+import com.jaytang.SnowConfig;
 import com.jaytang.model.ModelScan;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackageClasses = {ControllerScan.class, ModelScan.class,
+@SpringBootApplication(scanBasePackageClasses = {ControllerScan.class, ModelScan.class, SnowConfig.class,
 		ServiceScan.class
 })
-//@EnableAutoConfiguration
-//@ComponentScan
 @MapperScan(basePackages = "com.jaytang.mapper") // 扫描mapper包路径  加了@Mapper注解可以不要扫描
 public class SnowWebApplication {
 	public static void main(String[] args) {

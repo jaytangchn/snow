@@ -14,7 +14,7 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private UserMapper userMapper;
     @Override
-    public User getUser(String id) {
+    public User getUser(int id) {
         User user = userMapper.getUser(id);
         return user;
     }

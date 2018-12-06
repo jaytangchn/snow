@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/snow-config/snow-config.iml" filepath="$PROJECT_DIR$/snow-config/snow-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/snow-mapper/snow-mapper.iml" filepath="$PROJECT_DIR$/snow-mapper/snow-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/snow-model/snow-model.iml" filepath="$PROJECT_DIR$/snow-model/snow-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/snow-pro.iml" filepath="$PROJECT_DIR$/snow-pro.iml" />

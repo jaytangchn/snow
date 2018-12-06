@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="snow-config" />
         <module name="snow-mapper" />
         <module name="snow-model" />
         <module name="snow-service" />
@@ -13,11 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="snow-config" target="8" />
       <module name="snow-mapper" target="1.7" />
       <module name="snow-model" target="1.7" />
-      <module name="snow-pro" target="1.7" />
+      <module name="snow-pro" target="1.8" />
       <module name="snow-service" target="1.7" />
-      <module name="snow-web" target="1.7" />
+      <module name="snow-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

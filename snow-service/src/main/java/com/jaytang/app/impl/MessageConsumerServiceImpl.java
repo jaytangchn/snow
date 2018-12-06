@@ -1,8 +1,8 @@
 package com.jaytang.app.impl;
 
 import com.jaytang.app.MessageConsumerService;
-import com.jaytang.model.utils.LogUtil;
-import com.jaytang.model.utils.redis.JedisClient;
+import com.jaytang.redis.JedisClient;
+import com.jaytang.util.LogUtil;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.JedisPubSub;
 
