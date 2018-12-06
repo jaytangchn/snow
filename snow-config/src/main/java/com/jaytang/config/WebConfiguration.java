@@ -1,8 +1,8 @@
-package com.jaytang.model.config;
+package com.jaytang.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.jaytang.model.utils.LogUtil;
+import com.jaytang.util.LogUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +35,7 @@ public class WebConfiguration {
             //添加注册拦截器
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
-                LogUtil.info("==========初始化拦截器");
+                LogUtil.debug("==========初始化拦截器");
                 registry.addInterceptor(myInterceptor).addPathPatterns("/**");
             }
             //自定义静态资源映射目录

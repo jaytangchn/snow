@@ -1,4 +1,4 @@
-package com.jaytang.model.utils;
+package com.jaytang.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

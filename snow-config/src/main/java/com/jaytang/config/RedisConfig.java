@@ -1,6 +1,6 @@
-package com.jaytang.model.config;
+package com.jaytang.config;
 
-import com.jaytang.model.utils.LogUtil;
+import com.jaytang.util.LogUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
@@ -27,14 +27,14 @@ public class RedisConfig extends CachingConfigurerSupport {
      */
     @Bean
     public JedisConnectionFactory jedisConnectionFactory(){
-        LogUtil.info(">>>>>>>>>>>>>>>>JedisConnectionFactory初始化");
+        LogUtil.debug(">>>>>>>>>>>>>>>>JedisConnectionFactory初始化");
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(redisProperties);
         //todo: 过期了
         return jedisConnectionFactory;
     }
     @Bean
     public RedisTemplate<String,Object> getRedisTemplate(){
-        LogUtil.info(">>>>>>>>>>>> 初始化 RedisTemplate 成功");
+        LogUtil.debug(">>>>>>>>>>>> 初始化 RedisTemplate 成功");
         RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
         template.setConnectionFactory(jedisConnectionFactory());
         //使用StringRedisSerializer来序列化和反序列化redis的key值

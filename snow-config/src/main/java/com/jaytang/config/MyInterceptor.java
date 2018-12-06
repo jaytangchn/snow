@@ -1,7 +1,7 @@
-package com.jaytang.model.config;
+package com.jaytang.config;
 
 import com.jaytang.model.User;
-import com.jaytang.model.utils.LogUtil;
+import com.jaytang.util.LogUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

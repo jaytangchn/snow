@@ -1,4 +1,4 @@
-package com.jaytang.model.utils.redis;
+package com.jaytang.redis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPubSub;

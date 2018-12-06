@@ -1,4 +1,4 @@
-package com.jaytang.model.config;
+package com.jaytang.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
