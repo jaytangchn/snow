@@ -10,6 +10,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -20,6 +21,7 @@ import java.util.stream.Collectors;
 /**
  * 自定义身份认证realm
  */
+@Component
 public class CustomRealm extends AuthorizingRealm {
 
     private UserMapper userMapper;
@@ -59,7 +61,7 @@ public class CustomRealm extends AuthorizingRealm {
      * @throws AuthenticationException
      */
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws SnowException {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) token;
         String passWord = userMapper.getPwd(usernamePasswordToken.getUsername());
         if(null == passWord){

@@ -1,11 +1,12 @@
 package com.jaytang.config;
 
 import com.jaytang.config.model.CustomRealm;
-import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Map;
 /**
  * shiro 配置类
  */
-//@Configuration
+@Configuration
 public class ShiroConfig {
 
     /**
@@ -60,7 +61,8 @@ public class ShiroConfig {
      */
     @Bean
     public SecurityManager securityManager(){
-        DefaultSecurityManager securityManager = new DefaultSecurityManager();
+        //这里很容易搞错类， 有个DefaultSecurityManager类。。。。。。。。。。。
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         //设置relm
         securityManager.setRealm(customRealm());
         return securityManager;

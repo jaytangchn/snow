@@ -1,5 +1,5 @@
 # snow
-个人搭建Java web开发框架
+个人搭建Java web开发环境
 # 开发日志
  #### 2018/8/18:
  * 项目初始化
@@ -24,7 +24,13 @@
  * redis 消息队列
   #### 2018/08/24:
  * fastjson处理controller返回数据
+ #### 2018/12/6:
+ * 抽取出config作为独立的模块
+ * 整合shiro，完成部分配置
  #### 还可以做的
+ * 日期统一处理转换
+ * spring 缓存
+ * spring cloud微服务通讯
  * websocket
  * 使用redis做消息推送
  * 优化durid 和 mybaties 配置
